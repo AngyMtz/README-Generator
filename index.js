@@ -1,76 +1,45 @@
-// const inquirer = require('inquirer');
-// const fs = require('fs');
-// const util = require('util');
+const inquirer = require('inquirer');
 
-// // create writeFile function using promises instead of a callback function
-// const writeFileAsync = util.promisify(fs.writeFile);
-
-const promptUser = () => {
-    return inquirer.prompt([
-      {
-        type: 'input',
-        name: 'nameProj',
-        message: 'What is the name of your project?',
-      },
-      {
-        type: 'input',
-        name: 'name',
-        message: 'What is your name?',
-      },
-      {
-        type: 'input',
-        name: 'presDate',
-        message: 'Presentation date?',
-      },
-      {
-        type: 'input',
-        name: 'food',
-        message: 'Description ?',
-      },
-      {
-        type: 'input',
-        name: 'github',
-        message: 'Enter your GitHub Username',
-      },
-      {
-        type: 'input',
-        name: 'linkedin',
-        message: 'Enter your LinkedIn URL.',
-      },
-    ]);
-  };
-  
-  // const generateHTML = (answers) =>
-  //   `<!DOCTYPE html>
-  // <html lang="en">
-  // <head>
-  //   <meta charset="UTF-8">
-  //   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  //   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  //   <title>Document</title>
-  // </head>
-  // <body>
-  //   <div class="jumbotron jumbotron-fluid">
-  //   <div class="container">
-  //     <h1 class="display-4">Hi! My name is ${answers.name}</h1>
-  //     <p class="lead">I am from ${answers.location}.</p>
-  //     <h3>Example heading <span class="badge badge-secondary">Contact Me</span></h3>
-  //     <ul class="list-group">
-  //       <li class="list-group-item">My GitHub username is ${answers.github}</li>
-  //       <li class="list-group-item">LinkedIn: ${answers.linkedin}</li>
-  //     </ul>
-  //   </div>
-  // </div>
-  // </body>
-  // </html>`;
-  
-  // // Bonus using writeFileAsync as a promise
-  // const init = () => {
-  //   promptUser()
-  //     .then((answers) => writeFileAsync('index.html', generateHTML(answers)))
-  //     .then(() => console.log('Successfully wrote to index.html'))
-  //     .catch((err) => console.error(err));
-  // };
-  
-  // init();
-  
+inquirer
+  .prompt([
+    {
+      type: 'input',
+      message: 'What is your Project name?',
+      name: 'projName',
+    },
+    {
+      type: 'input',
+      message: 'Description of your project?',
+      name: 'Descrip',
+    },
+    {
+      type: 'input',
+      message: 'What problem does it solve?',
+      name: 'probSolv',
+    },
+    {
+      type: 'input',
+      message: 'What are the steps required to install your project?',
+      name: 'install',
+    },
+    {
+      type: 'input',
+      message: 'Insert Screenshots',
+      name: 'screenShot',
+    },
+    {
+      type: 'input',
+      message: 'Who collaborated on this project?',
+      name: 'collabor',
+    },
+    {
+      type: 'input',
+      message: 'License?',
+      name: 'collabor',
+    },
+  ])
+  .then((response) =>
+    response.confirm === response.password
+      ? console.log('Success!')
+      : console.log('You forgot your password already?!')
+  );
