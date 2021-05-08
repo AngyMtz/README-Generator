@@ -4,12 +4,22 @@ inquirer
   .prompt([
     {
       type: 'input',
+      message: 'What is your GitHub username?',
+      name: 'gitName',
+    },
+    {
+      type: 'input',
+      message: 'What is your e-mail address?',
+      name: 'email',
+    },
+    {
+      type: 'input',
       message: 'What is your Project name?',
       name: 'projName',
     },
     {
       type: 'input',
-      message: 'Description of your project?',
+      message: 'Short description of your project?',
       name: 'Descrip',
     },
     {
@@ -19,13 +29,14 @@ inquirer
     },
     {
       type: 'input',
-      message: 'What are the steps required to install your project?',
+      message: 'What command should be run to install dependencies?',
       name: 'install',
     },
     {
-      type: 'input',
-      message: 'Insert Screenshots',
-      name: 'screenShot',
+      type: 'list',
+      name: 'license',
+      message: 'What type of license did you use for your project?',
+      choices: ['MIT', 'Apache 2.0', 'GNU', 'BSD3', 'None'],
     },
     {
       type: 'input',
@@ -34,12 +45,12 @@ inquirer
     },
     {
       type: 'input',
-      message: 'License?',
-      name: 'collabor',
+      message: 'What does the user need to know about using the repo??',
+      name: 'userInst',
     },
   ])
   .then((response) =>
-    response.confirm === response.password
+    response.confirm === response.input
       ? console.log('Success!')
-      : console.log('You forgot your password already?!')
+      : console.log('You forgot an answer?!')
   );
