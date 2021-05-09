@@ -1,6 +1,6 @@
 
   ## Project
-  README Generator
+  README.md Generator
 
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -16,12 +16,12 @@
 
 
   ## Description
-  This proyect generates a README.md file from responses made by the user or programmer.
+  This project generates a README.md file from responses made by the developer.
 
 
 
   ## Problems Solve
-  It simplifies the creation of a README.md file
+  It simplifies the creation of a README.md file and allows the developer to spend less time writing a README.md file.
 
 
 
@@ -31,12 +31,12 @@
 
 
   ## Usage
-  The user needs to know how to install the inquirer on the terminal
+  The user needs to know how to install inquirer on the terminal.
 
 
 
   ## Tests
-  node index.js
+  npm i
 
 
 
@@ -46,7 +46,7 @@
 
 
   ## Installation
-  npm i
+  inquirer
 
 
 
