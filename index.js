@@ -55,8 +55,14 @@ inquirer
     },
     {
       type: 'input',
-      message: 'What does the user need to know about using the repo??',
+      message: 'What does the user need to know about using the repo?',
       name: 'userInst',
+      validate: (value)=>{ if(value){return true} else {return 'I need a value to continue'}},
+    },
+    {
+      type: 'input',
+      message: 'What command do you need to run the test?',
+      name: 'test',
       validate: (value)=>{ if(value){return true} else {return 'I need a value to continue'}},
     },
   ])

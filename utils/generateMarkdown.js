@@ -74,6 +74,15 @@ function generateMarkdown(data) {
   ## Problems Solve
   ${data.probSolv}\n\n
 
+  ## Collaborators
+  ${data.collabor}\n\n
+
+  ## Usage
+  ${data.userInst}\n\n
+
+  ## Test
+  ${data.test}\n\n
+
   ## Installation
   ${data.install}\n\n
 
