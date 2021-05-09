@@ -65,6 +65,12 @@ inquirer
       name: 'test',
       validate: (value)=>{ if(value){return true} else {return 'I need a value to continue'}},
     },
+    {
+      type: 'input',
+      message: 'What do you want programers to contribute?',
+      name: 'contribuiting',
+      validate: (value)=>{ if(value){return true} else {return 'I need a value to continue'}},
+    },
   ])
   .then((response) => {
     console.log(response)

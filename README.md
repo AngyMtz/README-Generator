@@ -1,7 +1,6 @@
-# undefined
-  
+
   ## Project
-  asdf
+  README Generator
 
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -17,32 +16,37 @@
 
 
   ## Description
-  asdf
+  This proyect generates a README.md file from responses made by the user or programmer.
 
 
 
   ## Problems Solve
-  asdf
+  It simplifies the creation of a README.md file
 
 
 
   ## Collaborators
-  asdf
+  Norma Martinez
 
 
 
   ## Usage
-  asdf
+  The user needs to know how to install the inquirer on the terminal
 
 
 
-  ## Test
-  asdf
+  ## Tests
+  node index.js
+
+
+
+  ## Contributing
+  Nothing
 
 
 
   ## Installation
-  asdf
+  npm i
 
 
 
@@ -57,6 +61,6 @@
   
 
   ## Questions
-  * GitHub: [asdf](https://github.com/asdf)
-  * Email: [asdf](mailto:asdf)
+  * GitHub: [AngyMtz](https://github.com/AngyMtz)
+  * Email: [nmartinezlagarda@gmail.com](mailto:nmartinezlagarda@gmail.com)
   
