@@ -1,5 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
+const generateMarkdown = require('./utils/generateMarkdown');
 
 inquirer
   .prompt([
@@ -59,8 +60,7 @@ inquirer
       validate: (value)=>{ if(value){return true} else {return 'I need a value to continue'}},
     },
   ])
-  .then((response) =>
-    response.confirm === response.input
-      ? console.log('Success!')
-      : console.log('You forgot an answer?!')
-  );
+  .then((response) => {
+    console.log(response)
+    fs.writeFile('README.md', generateMarkdown(response), (err) => err ? console.log(err) : console.log('success'));
+  })
